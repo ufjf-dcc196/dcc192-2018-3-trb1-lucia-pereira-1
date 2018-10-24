@@ -61,7 +61,7 @@ public class Cadastro_Eventos extends AppCompatActivity {
                     facilitador.setText("");
                     descricao.setText("");
 
-                    Toast.makeText(Cadastro_Eventos.this, "Evento Cadastrado", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Cadastro_Eventos.this, "Evento Cadastrado!", Toast.LENGTH_SHORT).show();
 
                 }
             }
