@@ -22,12 +22,17 @@ public class Eventos {
     }
 
     public Eventos() {
+        if(this.eventos.isEmpty()) {
+            criarLista();
+        }
     }
-    // public Eventos() {
-      //  if (this.evento.isEmpty()){
-      //      criarLista();
-     //   }
-   // }
+
+    private void criarLista() {
+        eventos.add(new Eventos("palestra","segunda","10","joao",""));
+        eventos.add(new Eventos("curso1","terca","11","joao",""));
+        eventos.add(new Eventos("palestra 2","quarta","11","joao",""));
+    }
+
 
     public String getTitulo() {
         return titulo;
@@ -71,6 +76,23 @@ public class Eventos {
 
     public void  addEventos(Eventos evento){
         eventos.add(evento);
+    }
+
+    public ArrayList<Eventos> getEventos() { return eventos; }
+
+    public Eventos getEventos(String titulo) {
+        for(Eventos e: this.getEventos()){
+            if(e.getTitulo().equals(titulo)) {
+                return e;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+
+        return titulo;
     }
 
 

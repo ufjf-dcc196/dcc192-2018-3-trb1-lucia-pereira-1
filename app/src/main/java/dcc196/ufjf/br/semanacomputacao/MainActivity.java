@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listPartcipantes;
@@ -47,7 +50,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+
+                ArrayList<Participantes> part;
+
+                part = participante.getParticipantes();
+                Participantes p = part.get(position);
+
+
+
+                Intent i = new Intent(MainActivity.this, Cadastro_Participantes.class);
+                i.putExtra("participante", p.getNome());
+                startActivity(i);
             }
+
         });
         listEventos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -55,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+    private void obterParticipantes(){
+        ArrayAdapter<Participantes> adapter = new ArrayAdapter<Participantes>(this,android.R.layout.simple_list_item_1,participante.getParticipantes());
+        listPartcipantes.setAdapter(adapter);
 
     }
 }

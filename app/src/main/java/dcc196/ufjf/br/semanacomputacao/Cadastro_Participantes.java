@@ -39,7 +39,7 @@ public class Cadastro_Participantes extends AppCompatActivity {
                                                   cpf.requestFocus();
                                               }else {
                                                   Participantes p = new Participantes(nome.getText().toString(), email.getText().toString(),cpf.getText().toString());
-                                                  MainActivity.participante.addParticipante(p);
+                                                  MainActivity.participante.addParticipantes(p);
                                                   nome.setText("");
                                                   email.setText("");
                                                   cpf.setText("");
