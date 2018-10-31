@@ -19,7 +19,7 @@ public class Cadastro_Participantes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_participantes);
+        setContentView(R.layout.activity_participantes2);
 
         nome = (EditText)findViewById(R.id.edtNome);
         email = (EditText)findViewById(R.id.edtEmail);

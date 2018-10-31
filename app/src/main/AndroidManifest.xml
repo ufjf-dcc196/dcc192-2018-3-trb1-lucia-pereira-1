@@ -18,8 +18,9 @@
         </activity>
         <activity android:name=".Cadastro_Participantes" />
         <activity android:name=".Cadastro_Eventos" />
-        <activity android:name=".Detalhes_Participantes" />
-        <activity android:name=".Edicao_dados"></activity>
+        <activity android:name=".Detalhes" />
+        <activity android:name=".Edicao_participantes" />
+        <activity android:name=".Edicao_eventos"></activity>
     </application>
 
 </manifest>

@@ -6,21 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".Cadastro_Eventos2">
 
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/descrica"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFacilitador" />
+
     <EditText
         android:id="@+id/editTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/edtTitulo"
         android:inputType="textPersonName"
         android:text="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="o" />
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txtDia"
@@ -28,34 +39,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
         android:text="@string/dia"
-        app:layout_constraintEnd_toStartOf="@+id/editDia"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+        tools:layout_editor_absoluteY="81dp" />
 
     <EditText
-        android:id="@+id/editDia"
+        android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/dia"
-        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:text="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toEndOf="@+id/txtDia"
         app:layout_constraintTop_toBottomOf="@+id/editTitulo"
-        tools:targetApi="o" />
+        android:autofillHints=""
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/txtHora"
@@ -74,19 +78,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/edHora"
         android:inputType="textPersonName"
         android:text="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/txtHora"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:targetApi="o" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txtFacilitador"
@@ -105,19 +106,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/edFacilitador"
         android:inputType="textPersonName"
         android:text="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toEndOf="@+id/txtFacilitador"
         app:layout_constraintTop_toBottomOf="@+id/editHora"
-        tools:targetApi="o" />
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/txtTitulo"
@@ -126,7 +124,9 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/titulo"
+        app:layout_constraintBottom_toTopOf="@+id/txtDia"
         app:layout_constraintEnd_toStartOf="@+id/editTitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -135,20 +135,18 @@
         android:id="@+id/editDescricao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:autofillHints=""
         android:ems="10"
-        android:hint="@string/edtDescricao"
         android:inputType="textPersonName"
         android:text="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtDescricao"
+        app:layout_constraintStart_toEndOf="@+id/txtTitulo"
         app:layout_constraintTop_toBottomOf="@+id/editFacilitador"
-        tools:targetApi="o" />
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/btnCadastrar"
@@ -177,16 +175,5 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/editDescricao"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txtDescricao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/descricao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFacilitador" />
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

@@ -5,9 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-public class Detalhes_Participantes extends AppCompatActivity {
+public class Detalhes extends AppCompatActivity {
 
     private Button edicao;
     private Button inscricao;
@@ -22,7 +21,7 @@ public class Detalhes_Participantes extends AppCompatActivity {
         edicao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Detalhes_Participantes.this,Edicao_dados.class);
+                Intent intent = new Intent(Detalhes.this,Edicao_participantes.class);
                 startActivity(intent);
 
             }
