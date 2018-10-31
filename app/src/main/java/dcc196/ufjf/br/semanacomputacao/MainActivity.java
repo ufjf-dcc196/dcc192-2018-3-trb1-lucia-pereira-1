@@ -24,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        listPartcipantes = (ListView) findViewById(R.id.listParticipantes);
+        listaParticipantes();
+        listEventos = (ListView) findViewById(R.id.listEventos);
+        listaEventos();
         btnParticipante = (Button) findViewById(R.id.btnParticipantes);
         btnEventos = (Button) findViewById(R.id.btnEventos);
 
@@ -67,14 +70,35 @@ public class MainActivity extends AppCompatActivity {
         listEventos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ArrayList<Eventos> event;
+                event = evento.getEventos();
+                Eventos e = event.get(position);
 
+                Intent a = new Intent(MainActivity.this, Cadastro_Eventos.class);
+                a.putExtra("Eventos",e.getTitulo());
+                startActivity(a);
             }
         });
 
     }
-    private void obterParticipantes(){
+
+    private void listaEventos() {
+        ArrayAdapter<Eventos> adapter = new ArrayAdapter<Eventos>(this,android.R.layout.simple_list_item_1,evento.getEventos());
+        listEventos.setAdapter(adapter);
+    }
+
+    private void listaParticipantes(){
         ArrayAdapter<Participantes> adapter = new ArrayAdapter<Participantes>(this,android.R.layout.simple_list_item_1,participante.getParticipantes());
         listPartcipantes.setAdapter(adapter);
 
+    }
+
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        listaParticipantes();
+        listaEventos();
     }
 }
