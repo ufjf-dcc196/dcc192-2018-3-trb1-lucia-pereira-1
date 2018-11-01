@@ -52,18 +52,12 @@ public class MainActivity extends AppCompatActivity {
         listPartcipantes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
                 ArrayList<Participantes> part;
-
                 part = participante.getParticipantes();
                 Participantes p = part.get(position);
-
-
-
-                Intent i = new Intent(MainActivity.this, Cadastro_Participantes.class);
+                Intent i = new Intent(MainActivity.this, Edicao_participantes.class);
                 i.putExtra("participante", p.getNome());
-                startActivity(i);
+                startActivityForResult(i,1);
             }
 
         });
@@ -73,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<Eventos> event;
                 event = evento.getEventos();
                 Eventos e = event.get(position);
-
-                Intent a = new Intent(MainActivity.this, Cadastro_Eventos.class);
+                Intent a = new Intent(MainActivity.this, Edicao_eventos.class);
                 a.putExtra("Eventos",e.getTitulo());
-                startActivity(a);
+                //startActivity(a);
+                startActivityForResult(a,2);
             }
         });
 

@@ -28,7 +28,7 @@ public class Cadastro_Eventos extends AppCompatActivity {
         hora = (EditText) findViewById(R.id.edtDia);
         facilitador = (EditText) findViewById(R.id.edtFacilitador);
         descricao = (EditText) findViewById(R.id.edtDescricao);
-        cadastrare = (Button) findViewById(R.id.btnCadastrarEv);
+        cadastrare = (Button) findViewById(R.id.btnCadastrar);
         cancelare = (Button) findViewById(R.id.btnCancelar);
 
         cancelare.setOnClickListener(new View.OnClickListener() {

@@ -15,9 +15,10 @@ public class Participantes {
         this.cpf = cpf;
 
     }
-
-
     public Participantes() {
+        if (participantes.isEmpty()) {
+            criarParticipantes();
+        }
 
     }
 
@@ -26,9 +27,7 @@ public class Participantes {
     }
 
     public void setNome(String nome) {
-        if (participantes.isEmpty()) {
-            criarParticipantes();
-        }
+        this.nome = nome;
     }
 
         public String getEmail () {

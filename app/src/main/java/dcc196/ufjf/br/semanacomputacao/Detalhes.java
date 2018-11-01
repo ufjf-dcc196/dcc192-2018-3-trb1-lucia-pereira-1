@@ -17,6 +17,7 @@ public class Detalhes extends AppCompatActivity {
         setContentView(R.layout.activity_detalhes);
 
         edicao = (Button) findViewById(R.id.btnEdicao);
+        inscricao = (Button)findViewById(R.id.btnIncricao);
 
         edicao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,5 +27,13 @@ public class Detalhes extends AppCompatActivity {
 
             }
         });
+        inscricao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Detalhes.this,Edicao_eventos.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
